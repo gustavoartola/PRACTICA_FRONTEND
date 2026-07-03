@@ -44,10 +44,12 @@
 
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Verduleria los 3 hermanos</h1>
+    </header>
+    <aside></aside>
     <main>
         
-        <h1>Verduleria los 3 hermanos</h1>
         <h2>Encuentre aquì las mejores ofertas</h2>
 
         <section>
@@ -74,50 +76,72 @@
         </article>
 
         <section>
+              <h3>Nuestra presentación institucional?</h3>                  
               <iframe width="560" height="315" src="https://www.youtube.com/embed/3xMKrcrfddw?si=Re8UkHG4xy3m1ryX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
-
+        <section>
+              <h3>Nuestra Galeria de fotos:</h3>                  
+              <img src="foto Patreon.jpg" alt="Imagen de muestra"
+        </section>
         <section>
 
         </section>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26278.58328541877!2d-58.44828159999999!3d-34.5833472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1782986776004!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <h3>Donde estamos?</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26278.58328541877!2d-58.44828159999999!3d-34.5833472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1782986776004!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         <section>
 
         <h4>Formulario de Contacto</h4>
-            <form action="api">
+            <form action="api" method="post">
                 <div>
                     <label>Ingrese su Nombre:
-                        <input type="text" placeholder="Nombre">
+                        <input type="text" placeholder="Nombre" name="Nombre">
                     </label>
                 </div>
                 <div>
                     <label>Ingrese su Edad:
-                         <input type="number" placeholder="Edad">
+                         <input type="number" placeholder="Edad" name="Edad">
                     </label>                   
                 </div>
                 <div>
                     <label>Ingrese su Fecha de Nacimiento:
-                          <input type="date" placeholder="Fecha Nacimiento">
+                          <input type="date" placeholder="Fecha Nacimiento" name="Nacimiento">
                     </label>    
                 </div>
                 <div>
                     <label>Ingrese su Teléfono:
-                           <input type="tel" placeholder="telefono">
+                           <input type="tel" placeholder="telefono" name="Teléfono">
+                    </label>               
+                </div>
+                <div>
+                    <label>Ingrese su e-mail:
+                           <input type="email" placeholder="e-mail" name="e-mail">
                     </label>               
                 </div>
                 <div>
                     <label> Seleccione un Color:
-                            <input type="color">
+                            <input type="color" name="color">
                     </label>
                 </div>
                 <div>
-                    <label>ingrese palabra clave:
-                             <input type="password" placeholder="Contraseña">
+                    <label> Rango de Precios:
+                            <input type="range" min="50" max="50000" value="1000" name="Precios">
                     </label>
+                </div>
+                <div>
+                    <!--Ejemplo de conexiòn label / input usando tags anidados-->
+                    <label>ingrese palabra clave:
+                             <input type="password" placeholder="Contraseña" name="Contraseña">
+                    </label>
+                </div>
+                <div>
+                    <!--*Ejemplo de conexiòn label / input usando atributos for y id -->
+                    <label for="archivo"> Adjunte su CV:</label>
+                    <input type="file" id="archivo" name="archivo">
+
                 </div>
                 <div>
                     <label>Seleccione un color en el listado:
-                        <select name="" id="">
+                        <select name="seleccion" id="">
                             <option>Rojo</option>
                             <option>Azul</option>
                         </select>
@@ -136,7 +160,7 @@
                 <div>
                     <label>Seleccione los vegetales favoritos:
                         <label>Lechuga
-                            <input type="checkbox">
+                            <input type="checkbox" name="seleccion_check">
                         </label>
                         <label>Rucula
                             <input type="checkbox">
@@ -146,9 +170,9 @@
                         </label>
                     </label>
                 <div>
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Limpiar</button>
-                    <button type="button">Cancelar</button>
+                    <button type="submit" name="Enviar">Enviar</button>
+                    <button type="reset" name="reseteo">Limpiar</button>
+                    <button type="button" name="boton">Cancelar</button>
                 </div>
             </form>
         </section>
