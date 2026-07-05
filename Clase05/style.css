@@ -98,12 +98,12 @@ padding: 20px;
 
 .boxmodel4{
   /* Aplicando PADDING o MARGIN en cada sermento del contenedor*/ 
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   border: 8px solid;
   border-color:green;
   color: mediumvioletred;
-  width: 250;
+  width: 900;
 } 
 
 /* Selector universal para todo los elementos. Es de prioridad debil
