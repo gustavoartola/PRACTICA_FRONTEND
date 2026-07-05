@@ -1,0 +1,116 @@
+/* Ventajas de usar Metodo 3 ara aplicar CSS - EXTERNO - Usando archivos .css
+* El estilo esta centralizado en tu sistema separado por responsabilidades
+* Mas facil de mantener y consistente
+* Uso de reglas css para elementos con mismas caracteristicas
+* cambias una sola vez y se aplica en todos los casos en la que definiste la regla.  */
+
+h1{
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    text-align: center;  
+}    
+
+
+/* CSS aplicando selectores en ETIQUETAS (TAGS) - A un eleemento adyasente  h4  */
+label + p{
+    font-style: italic;
+    color:blue 
+}
+
+/* Si quiero afectar consecutivamente a dos PARRAFOS adyacentes de LABEL (es hasta dos adyasentes)
+la "," se utiliza para aplicar el estilo a mas de un selector. */
+/* label + p, label + p + p { 
+    font-style: italic;
+} */
+
+/* Si quiero afectar a todos los parrafos P luego del LABEL se utiliza "~" */
+/* label ~ p { 
+    text-decoration: underline;
+}  */
+
+h5 {
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* CSS aplicando selectores en ETIQUETAS (TAGS) - En Este caso a todos los p */
+p {
+ color: blueviolet;
+ font-family: 'Courier New', Courier, monospace;
+}
+
+/* CSS aplicando selectores CLASE (se identifica con un .) */
+.destacado{
+    font-weight:bolder;
+    text-decoration: underline;
+    color: crimson ;
+}
+
+/* CSS aplicando selectores de ID (se identifica con un #) */
+#principal{
+    color: rgb(31, 126, 86) ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* CSS aplicando selectores de IMPORTANT 
+Mas alla de que en este bloque el * tiene una Espedificidad baja
+el !Important lo lleva a un valor infinito de eEspedificidad, dandlle la mayor prioridad al estilo donde se aplica. */
+/* *{
+    color: aqua !important;
+} */
+
+
+/* CSS aplicando BOXMODEL*/
+.boxmodel{
+  /*Es PADDING es el espacio que se encuentra entre el CONTENIDO y el BORDE */  
+  padding: 20px;
+  /*EL BORDER La propiedad tiene por simismo tres atributos: grosor, tipo de borde y color */
+  border: 4px solid blue;
+  /*EL MARGIN es el espacio que se encuentra entre el BORDE y el siguiente elemento */
+  margin: 50px;
+  color: mediumvioletred;
+} 
+
+.boxmodel2{
+padding: 20px;
+  border: 4px blue;
+  margin: 50px;
+  color: mediumvioletred;
+  border-style: dashed;
+  border-right-style:dotted;
+  border-bottom-width: 10px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-color: red;
+} 
+
+
+.boxmodel3{
+  /* Aplicando PADDING o MARGIN en cada sermento del contenedor*/ 
+  padding: 50px 20px 10px 5px;
+  border: 8px solid;
+  border-color: blue red orchid green;
+  /*EL MARGIN es el espacio que se encuentra entre el BORDE y el siguiente elemento */
+  margin: 20px 10px 5px 1px;
+  color: mediumvioletred;
+} 
+
+
+.boxmodel4{
+  /* Aplicando PADDING o MARGIN en cada sermento del contenedor*/ 
+  margin: 20px;
+  padding: 20px;
+  border: 8px solid;
+  border-color:green;
+  color: mediumvioletred;
+  width: 250;
+} 
+
+/* Selector universal para todo los elementos. Es de prioridad debil
+Ejemplo para el SIZEBOX 
+Reset de CSS al inicio del proyecto */
+*, *::before, *::after {
+ box-sizing: border-box;
+ margin:0;
+ padding: 0;
+}

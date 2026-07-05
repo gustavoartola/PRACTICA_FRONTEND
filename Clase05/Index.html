@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5 - Introducción a CSS Estilo y Cascada</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- METODO 2 - Aplicando CSS INTERNO en HEAD o BODY - no recomendado--> 
+    <style>
+        h4{
+            color: rgb(29, 204, 52);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Clase 5 - Introducción a CSS Estilo y Cascada</h1>
+
+    <h2>1. Tres Metodos para aplicar CSS</h2>
+
+    <!-- METODO 1 - Aplicando CSS en linea - no recomendado dado
+     dificil de mantener, hay que modificar elemento por elemento en el html
+     Es un selector fuerte que tiene prioridad sobre otros -->
+    <h3 style="color: rgb(245, 26, 26);">Titulo de Ejemplo (Aplicando CSS en linea)</h3>
+     
+    <!-- METODO 2 - Aplicando CSS INTERNO en el HEAD - no recomendado dado-->
+    <h4>Titulo de Ejemplo  (Aplicando CSS INTERNO en HEAD)</h4>
+
+      <!--METODO 3 - PROFESIONAL - Aplicando CSS con archivo EXTERNO style.css y aplicando estilos con selector tipo elemento, en este caso H1-->
+    <h5>Titulo de Ejemplo (PROFESIONAL - Aplicando CSS con archivo EXTERNO style.css)</h5>      
+  
+    <h2>2. CSS con Selectores</h2>
+
+    <!--1. Aplicando CSS a un ID -->
+    <p id="principal">a. Aplicando CSS con ID</p>  
+
+    <!--2. Aplicando CSS a un TAG (ETIQUETA) -->
+    <p>b. Aplicando CSS con un TAG (ETIQUETA), em este caso desde archivo EXTERNO style.css</p>
+
+    <!--3. Aplicando CSS a una CALSE -->
+    <p class="destacado">c. Aplicando CSS con una CALSE en todo un parrafo</p>    
+    <p>d. Aplicando CSS con una CALSE solo en una parte del parrado. Usando SPAM <span class="destacado">(parte de un texto de un parrafo)</span></p>    
+
+    <!-- Aplicando CSS a un TAG adyasente -->
+    <label><strong>Aplianco CSS a TAGS adyasentes a otro</strong></label>
+    <p>Este 1er parrafo adyasente a H2, aplicado CSS</p>
+    <p>Este 2do parrafo adyasente a titulo H2, y no se ve afectado por el CSS</p>
+    <p>Este 3er parrafo, unico y direferente</p>
+
+    <h2>3. BOXMODEL</h2>
+    <div class="boxmodel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptate, rem neque consequatur repellendus nobis doloribus libero quam quod? Cum ab, laudantium laborum vel veniam maiores voluptatem culpa sequi veritatis.</p>
+    </div>
+    <div class="boxmodel2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptate, rem neque consequatur repellendus nobis doloribus libero quam quod? Cum ab, laudantium laborum vel veniam maiores voluptatem culpa sequi veritatis.</p>
+    </div>
+    <div class="boxmodel3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptate, rem neque consequatur repellendus nobis doloribus libero quam quod? Cum ab, laudantium laborum vel veniam maiores voluptatem culpa sequi veritatis.</p>
+    </div>
+</body>
+</html>
