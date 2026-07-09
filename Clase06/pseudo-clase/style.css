@@ -1,0 +1,67 @@
+.tarjeta{
+    background-color: antiquewhite;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    /* transition maneja los efectos, su duracion, y el tipo de efecto */
+    transition: all 2s ease;
+    /*Cambia el cursor con la manito */
+    cursor: pointer;
+    width: 90%;
+}
+
+
+/* Todo lo que escriba en esta regla .css, va a surgir efecto cuando pases el mouse sobre el elemento */
+.tarjeta:hover{
+    background-color: violet;
+    color: white;
+    /* Este efecto transforma el elemento un  .03% */
+    transform: scale(1.03);
+    border: solid red 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.btn{
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: greenyellow;
+    color: black
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+
+/* Cuando pasas eñ mouse encima surge el efecto del :hover */
+.btn:hover{
+    /* Mas oscuro al pasar el mouse */
+    background-color: green;
+    color: white;
+}
+
+
+/* Cuando presionas y mantenes un boton surge el efecto del :active */
+.btn:active{
+    transform: scale(0.8);
+}
+
+input{
+    padding: 20px;
+    font-size: 15px;
+    border: red solid 6px;
+    transition: border-color 1s ease;
+    /* Por defecto al hacer click en un input, este tieen una linea grueza que no dejaria ver el cambio de color: ; */
+    outline: none;
+}
+
+/* Cuando seleccionas un elemento surge el efecto del :focus */
+input:focus{
+    /* Permite modificar el color de un borde */
+    border-color: blue;
+}
+

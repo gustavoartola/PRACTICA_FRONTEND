@@ -1,0 +1,27 @@
+.titulo-2::before{
+    content: "🍔 ";
+}
+
+.titulo-2::after{
+    content: "🥐 ";
+}
+
+/* Sin importal el texto que tenga, siempre la primera letra se va a comportar distinta */
+.lorem::first-letter{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Afecta a la primera linea */
+.lorem::first-line{
+    text-transform: uppercase;
+    color: red;
+}
+
+
+/* El texto seleccionado se comporta de forma que define la regla */
+.lorem::-moz-selection{
+    background-color: yellow;
+    color: black;
+}
