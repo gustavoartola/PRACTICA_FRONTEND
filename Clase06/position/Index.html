@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase06 - Tema: Position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>5 tipos de Posicionamiento</h1>
+    <article>
+        <h2>1. Static (por defecto)</h2>
+        <p>Flujo Normal - No responde a top, left, right, botton</p>
+        <div class="box">Caja 1</div>
+        <div class="box gris">Caja 2</div>
+    </article>
+
+      <article>
+        <h2>2. Relative</h2>
+        <p>La Caja 2 se mueve respecto a su posición original, pero su hueco de sigue reservando</p>
+        <div class="box">Caja 1</div>
+        <div class="box gris relative">Caja 2</div>
+        <div class="box">Caja 3</div>
+    </article>  
+
+     <article>
+        <h2>3. Absolute</h2>
+        <p>El padre tiene position relative y el hijo position absolute. El hijo se ubica en la esquina del padre. Este es el patron mas usado (ej. Badges)</p>
+        <div class="box-parent">
+            <span class="badge">Nuevo</span>
+        </div>
+    </article>  
+
+    <article>
+        <h2>4. Fixed</h2>
+        <p>El botóm de la esquina inferior esta fijo a la ventana, Miralo mientras haces scroll. No se mueve </p>
+    </article>  
+
+    <article>
+        <h2>5. Sticky</h2>
+        <p>El titulo violeta de abajo se comporta como relative hasta que toca el borde superior; ahí se pega mientras dure su contenedor</p>
+
+        <div class="scroll-area">
+            <div class="spacer">Contenido antes del sticky</div>
+            <h3 class="sticky-header">Header Sticky - mirá como se pega arriba</h3>
+            <div class="spacer" style="height: 1600px;">Contenido largo para poder escrolear <strong>freefrontend</strong></div>
+        </div>
+
+    </article>
+
+    <a href="#" title="Botón flotante fixed" class="fixed-btn">📧</a>
+</body>
+</html>
