@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flex-item{
+    background-color: green;
+    color: white;
+    border: solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 32px;
+    padding: 20px;
+}
+
+
+.flex-container{
+  display: flex; 
+  gap:20px;
+  padding: 20px;
+  background-color: orange;
+  border: solid black;
+  height: 200px;
+}
+
+.ai-strech{
+    align-items: stretch;
+}
+
+
+.ai-start{
+    align-items: start;
+}
+
+.ai-end{
+   align-items: end; 
+}
+
+.ai-central{
+   align-items:center; 
+}
+

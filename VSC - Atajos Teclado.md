@@ -9,3 +9,6 @@ Ctrl+k Ctrl+c  --> Comenta texto seleccionado
 
 
 Ctrl+k Ctrl+u  --> descomenta texto seleccionado
+
+Ctrl+f --> Buscar y Reemplazar
+

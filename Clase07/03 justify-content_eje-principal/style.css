@@ -1,0 +1,44 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flex-item{
+    background-color: green;
+    color: white;
+    border: solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+.flex-container{
+  display: flex; 
+}
+
+.jc-start{
+    justify-content: start;
+}
+
+.jc-end{
+    justify-content: end;
+}
+
+.jc-central{
+    justify-content:center;
+}
+
+.jc-between{
+    justify-content:space-between;
+}
+
+.jc-around{
+    justify-content:space-around;
+}
+
+.jc-evenly{
+    justify-content:space-evenly;
+}
+

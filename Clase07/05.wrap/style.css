@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:10px;
+ }
+
+
+.flex-item{
+    background-color: green;
+    color: white;
+    border: solid black;
+    padding: 20px 80px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 32px;
+}
+
