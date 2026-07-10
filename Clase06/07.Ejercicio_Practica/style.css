@@ -1,0 +1,48 @@
+/* El asterisco (*) selecciona absolutamente TODAS las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Vital: el width incluye padding y border */
+}
+
+body{
+    padding: 10px; 
+}
+
+.tarjeta{
+    
+    position: relative;
+    margin: 15px;
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+    border: 2px solid gray;
+    background-color: beige;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* sombra inicial */
+    transition: box-shadow 0.3s ease;       /* transición suave */
+    text-align: center;     /* centra vertical */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.tarjeta:hover{
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4); /* sombra más grande al pasar el mouse */
+}
+
+.oferta{
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    padding: 10px;
+    background-color: aqua;
+    border: 1px solid blue;
+    border-radius: 25px;
+}
+
+.precio{
+    margin: 15px;
+}
+
+.precio::after{
+    content: "USD";
+}
