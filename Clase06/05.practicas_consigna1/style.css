@@ -1,3 +1,14 @@
+/* El asterisco (*) selecciona absolutamente TODAS las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Vital: el width incluye padding y border */
+}
+
+body{
+    padding: 10px; 
+}
+
 .padre{
     border: 2px solid black;
     border-radius: 8px;
