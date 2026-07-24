@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding:20px;
+  gap:20px;
+  min-height: 100vh;
+}
+
+
+
+/* Punto de quiebre --> brakpoint --> Media Query.
+
+Desde 0px a 800px defino comportamiento (condicion).
+
+*/
+
+@media (max-width: 800px){
+
+h1{
+    color: blue;
+}
+
+p{
+    color:coral
+}
+
+body{
+    background-color: aquamarine;
+}
+
+}
+
+@media (max-width: 500px){
+
+body{
+    flex-direction: column;
+    background-color: black;    
+}
+
+h1{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+
+}
