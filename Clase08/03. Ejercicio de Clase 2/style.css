@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    color: rgb(34, 34, 34);
+    background: rgb(244, 244, 244);
+}
+
+code{
+    background-color:lightgray;
+    font-family: monospace;
+    background: rgb(238, 238, 238);
+    border-radius: 4px;
+}
+
+.hero {
+    color: white;
+    text-align: center;
+    background: rgb(43, 45, 66);
+    padding: 2rem 1.5rem;
+}
+
+ol, ul{
+    padding: 1rem;
+}
+
+.tarjeta-consigna {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+    max-width: 1100px;
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.tarjeta-consigna .nota {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: rgb(34, 34, 34);
+    background: rgb(255, 244, 214);
+    border-left: 4px solid rgb(255, 209, 102);
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+.grid-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
+    background-color: white;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+footer{
+    text-align: center;
+}
+
+ @media (min-width:768px){
+  
+    .grid-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card{
+        width: 48%;
+    }
+
+ }
+
+
+ @media(min-width: 1024px){
+
+    .card{
+        width: 30%;
+    }
+
+ }
