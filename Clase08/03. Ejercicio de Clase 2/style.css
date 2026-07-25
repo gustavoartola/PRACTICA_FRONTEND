@@ -10,6 +10,16 @@ body{
     line-height: 1.5;
     color: rgb(34, 34, 34);
     background: rgb(244, 244, 244);
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     padding: 1rem;
+
 }
 
 code{
@@ -26,18 +36,29 @@ code{
     padding: 2rem 1.5rem;
 }
 
+h1{
+    /* "Sé tan grande como el 5% de la pantalla, PERO nunca bajes de
+    1.5rem, ni superes los 3rem" */
+    font-size: clamp(1.5rem, 5vw, 3rem);
+
+}
+
 ol, ul{
     padding: 1rem;
+}
+
+.tarjeta-consigna, .grid-container{
+     max-width: 1100px;
 }
 
 .tarjeta-consigna {
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 8px;
-    max-width: 1100px;
     background: white;
     border-radius: 10px;
     padding: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .tarjeta-consigna .nota {
