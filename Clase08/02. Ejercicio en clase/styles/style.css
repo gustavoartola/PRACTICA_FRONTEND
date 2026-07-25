@@ -65,7 +65,7 @@ article{
  }
 
 .cont-textos{
-    padding: 40px;
+    padding: 30px;
     width:50%;
 }
 
@@ -78,25 +78,29 @@ article{
 .text-categoria{
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-weight: 200;
+    font-weight: 300;
+    font-size: medium;
     font-family: var(--text-font);
+    color: var(--color-grey);
     margin-bottom: 25px;
 }
 
 .text-titulo{
     font-family: var(--title-font);
-    font-size:30px;
+    font-size:34px;
     margin-bottom: 25px;
+    line-height: 1;
 }
 
 .text-descripcion{
     font-family: var(--text-font);
+    color: var(--color-grey);
     margin-bottom: 25px;
 }
 
 .cont-precios{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
     margin-bottom: 25px;
 }
@@ -104,13 +108,14 @@ article{
 
 .precio-oferta{
     font-family: var(--title-font);
+    color: var(--color-primary);
     font-weight: bold;
     font-size:xx-large;
-    color: var(--color-primary);
 }
 
 .precio-real{
     font-family: var(--text-font);
+    color: var(--color-grey);
     text-decoration: line-through;
 }
 
@@ -142,7 +147,7 @@ button:hover{
 @media  (max-width:600px) {
 
     body{
-        padding: 10px;
+        padding: 20px;
     }
 
     .imagen-pc{
@@ -154,6 +159,7 @@ button:hover{
     }
 
     article{
+        display: block;
         flex-direction:column;
         width: 100%;
         overflow: auto;
