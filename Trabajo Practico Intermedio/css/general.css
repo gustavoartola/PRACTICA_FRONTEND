@@ -151,6 +151,7 @@ ul{
 
 .header-menu{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap:0.5rem;
 }
@@ -211,8 +212,16 @@ footer {
 
 
 /* Responsive*/
+
+@media(min-width:630px){
+    .header-menu{
+        flex-direction: row;
+    }
+}
+
 @media(min-width:900px){
     .header-nav{
         flex-direction: row;
     }
 }
+
