@@ -1,0 +1,218 @@
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box
+}
+
+
+/* Variables 
+-colores
+-tamaños
+-fuentes
+*/
+
+:root {
+
+    /* Variables de Color */
+    --bg-main: #F8FAFC;  /* → fondo general de la página */
+    --bg-card: #FFFFFF;  /* → tarjetas, bloques destacados y superficies */
+    --primary: #1E3A8A;  /* → identidad institucional, header y footer  */
+    --secondary: #60A5FA;  /* → elementos secundarios */
+    --accent: #0D9488;  /* → acciones importantes */ 
+    --accent-hover: #0F766E;
+    --text-color: #0F172A;   /* → texto principal */ 
+    --border-color: #E2E8F0;
+    --white-color: #FFFFFF;
+
+
+    /* Variables de Fuentas */
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    /* Otras Variables */
+    --max-width: 1100px;
+}
+
+/* Aplico estilos generales */
+h1{
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(2.25rem 5vw 3.5rem);
+}
+
+h2{
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(1.5rem 3vw 2rem);
+}
+
+body p{
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+
+body {
+
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    line-height: 1.6;
+
+    /* Definir el alto del boody al 100% del alto de tu dispositivo-  Evitar que el footer se suba */
+    min-height: 100vh;
+ 
+    /* mobile first  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+img{
+    min-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Botones reutilizables */
+.btn {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 30px;
+    padding:0.2rem  1rem;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: var(--accent);
+    color: var(--bg-main);
+    transition: transform 0.5s, baclground-color 0.3s;
+}
+
+.btn-primary:hover{
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    transform: scale(1.05);
+}
+
+
+/* Estilos del Header*/
+.header-logo{
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size:1.5rem;
+    color: var(--white-color);
+}
+.header-menu a{
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: color, background-color, 0.4s;
+}
+
+.header-menu a:hover{
+    color: var(--accent);
+    background-color: #F8FAFC;
+}
+
+.header-destacado{
+    background-color: var(--secondary);
+    border: #F8FAFC;
+}
+
+.header-nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.header-menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+
+
+header {
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+}
+
+
+
+/* Estilos del footer */
+
+footer {
+    background-color: var(--primary);
+    margin-top: auto;
+}
+
+.footer-contacto p{
+    color: var(--white-color);
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.footer-social a{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    transition: color, 0.4s;
+}
+
+.footer-social a:hover{
+    color: var(--secondary);
+}
+
+.footer-general{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    gap: 1rem;
+    padding: 0.6rem;    
+}
+
+.diseño{
+    background-color:var(--secondary);
+    color: var(--white-color);
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.5rem;
+    text-align: center;
+    padding: 0.15rem;
+}
+
+
+
+/* Responsive*/
+@media(min-width:900px){
+    .header-nav{
+        flex-direction: row;
+    }
+}

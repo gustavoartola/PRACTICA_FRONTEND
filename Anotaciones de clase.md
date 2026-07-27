@@ -33,3 +33,19 @@
 
     Metodologia de clases
     https://getbem.com/introduction/
+
+
+
+##CLASE 10 - PRACTICA MAQUETACION##
+
+    Paletas de colores
+
+    https://www.color-hex.com/color-palettes/
+    https://colorhunt.co/
+
+
+    Fuentes
+    https://fonts.google.com/
+
+    iconos
+    https://fontawesome.com/

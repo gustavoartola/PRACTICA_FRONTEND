@@ -1,0 +1,89 @@
+:root {
+
+    /* Variables de Color */
+    --bg-main: #F8FAFC;
+    /* → fondo general de la página */
+    --bg-card: #FFFFFF;
+    /* → tarjetas, bloques destacados y superficies */
+    --primary: #1E3A8A;
+    /* → identidad institucional, header y footer  */
+    --secondary: #60A5FA;
+    /* → elementos secundarios */
+    --accent: #0D9488;
+    /* → acciones importantes */
+    --accent-hover: #0F766E;
+    --text-color: #0F172A;
+    /* → texto principal */
+    --border-color: #E2E8F0;
+    --white-color: #FFFFFF;
+
+
+    /* Variables de Fuentas */
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+}
+
+.hero {
+    width: 100%;
+    min-height: 80vh;
+    /* background-image:url(../../assets/img/hero-dental-mobile-750x1000.avif); */
+    background-image: linear-gradient(90deg,
+            rgba(248, 250, 252, 0.96) 0%,
+            rgba(248, 250, 252, 0.88) 28%,
+            rgba(248, 250, 252, 0.45) 48%,
+            rgba(248, 250, 252, 0) 65%), url(../../assets/img/hero-dental-mobile-750x1000.avif);
+
+    background-size: cover;
+    background-position: top;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
+.hero-article {
+    line-height: 2.5;
+    padding: 1rem 0;
+}
+
+.hero-botonera{
+    display:flex;
+    gap:0.8rem;
+}
+
+/* Responsive Tablet */
+@media(min-width:375px) {
+
+    .hero {
+
+        background-image: linear-gradient(90deg,
+                rgba(248, 250, 252, 0.96) 0%,
+                rgba(248, 250, 252, 0.88) 28%,
+                rgba(248, 250, 252, 0.45) 48%,
+                rgba(248, 250, 252, 0) 65%), url(../../assets/img/hero-dental-tablet-1200x900.avif);
+
+    }
+
+
+}
+
+
+
+/* Responsive Desktop */
+@media(min-width:900px) {
+
+    .hero {
+
+        background-image: linear-gradient(90deg,
+                rgba(248, 250, 252, 0.96) 0%,
+                rgba(248, 250, 252, 0.88) 28%,
+                rgba(248, 250, 252, 0.45) 48%,
+                rgba(248, 250, 252, 0) 65%), url(../../assets/img/hero-dental-desktop-1920x1080.avif);
+    }
+
+}
