@@ -1,0 +1,61 @@
+.sobremi-section {
+  /* background-color:gold ; */
+  display: flex;
+  flex-direction: column;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sobremi-grid {
+  /* background-color:darkorchid; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.sobremi-porfolio{
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(1, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row; 
+  }
+
+
+.sobremi-porfolio-photo{
+    background-color: darkkhaki;
+    width: 100%;
+}
+
+.sobremi-porfolio-description{
+    /* background-color:darksalmon; */
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    gap: 0.6rem;
+}
+
+
+
+.sobremi-experience{
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+    border-radius: 10px;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(1, 0, 0, 0.3);
+}
+
+.sobremi-porfolio img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

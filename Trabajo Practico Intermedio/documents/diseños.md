@@ -40,5 +40,9 @@ Texto Base              Azul Marino Oscuro (Textos principales, legibilidad alta
 <i class="fa-brands fa-whatsapp"></i>
 
 
+<i class="fa-regular fa-heart"></i>
+<i class="fa-light fa-people-line"></i>
+<i class="fa-regular fa-shield"></i>
+
 ##REFERENCIAS DE PAGINAS##
 https://www.centroach.com/
