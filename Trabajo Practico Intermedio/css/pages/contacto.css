@@ -1,0 +1,175 @@
+:root {
+
+    /* Variables de Color */
+    --bg-main: #F8FAFC;
+    /* → fondo general de la página */
+    --bg-card: #FFFFFF;
+    /* → tarjetas, bloques destacados y superficies */
+    --primary: #1E3A8A;
+    /* → identidad institucional, header y footer  */
+    --secondary: #60A5FA;
+    /* → elementos secundarios */
+    --accent: #0D9488;
+    /* → acciones importantes */
+    --accent-hover: #0F766E;
+    --text-color: #0F172A;
+    /* → texto principal */
+    --border-color: #E2E8F0;
+    --white-color: #FFFFFF;
+
+
+    /* Variables de Fuentas */
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    /* Otras Variables */
+    --max-width: 1100px;
+}
+
+.contacto-section {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    height: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.contacto-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: stretch;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(1, 0, 0, 0.3);
+}
+
+
+/* #ESTILOS DEL CONTACTO## */
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 1.5rem;
+    gap: 0.6rem;
+}
+
+.contacto-destacado{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 20%;
+    width: 100%;
+    gap: 0.85rem;
+}
+
+.contacto-mapa {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 80%;
+    width: 100%;
+}
+
+.contacto-mapa iframe {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.tel-destacado{
+    font-family: var(--font-heading);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.horario-destacado{
+    font-family:var(--font-body);
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+
+/* #ESTILOS DEL FORMULARIO## */
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    gap: 0.6rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    border-radius: 10px;
+    /* box-shadow: 0 4px 12px rgba(1, 0, 0, 0.3); */
+    height: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.2rem 0;
+}
+
+label,
+fieldset {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+input,
+select,
+textarea, 
+fieldset{
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid var(--secondary);
+    border-radius: 8px;
+    background-color: var(--bg-main);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.radio-group div {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0; 
+}

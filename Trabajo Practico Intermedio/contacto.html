@@ -30,94 +30,124 @@
         <li><a href="./galeria.html">Galeria</a></li>
         <li><a href="./contacto.html">Contacto</a></li>
         <li>
-          <a class="header-destacado" href="./agendar.html">Agendar Turno</a>
+          <a class="header-destacado" href="./contacto.html">Agendar Turno</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1 class="page-title-primary">Contacto</h1>
-    <section class="contacto-contenedor">
-      <div class="contacto-seccion-1">
-        <div class="contacto-info">
-          <p>E-mail: gustavolopez@gmail.com</p>
-          <p>Tel: (11) 3565 5864</p>
-          <p>Dirección: Av. Corrientes 3600</p>
-          <p>Chacarita (C.A.B.A)</p>
-          <p>Horario: Lunes a Viernes: 8:30hrs a 20:00hrs</p>
-        </div>
-        <div>
-          <div class="contacto-tel-destacado">
-            <p>Tel: (11) 3565 5864</p>
-          </div>
-          <div>
-            <div class="contacto-social">
-              <a href="#" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="contacto-seccion-2">
-        <div class="contacto-mapa">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0073418051306!2d-58.418122989374055!3d-34.60397585739789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8a448229f9%3A0xb7fd3cdfa562f957!2sAv.%20Corrientes%203600%2C%20C1194AAO%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1785165402711!5m2!1ses!2sar"
-            width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
-        <div class="contacto-formulario">
-          <form action="api" method="post">
-            <div>
-              <label>Nombrey Apellido:
-                <input type="text" placeholder="nombre-apellido" name="Nombre">
-              </label>
+    <h1 class="page-title-primary">Contacto</h1>
+
+    <section class="contacto-section">
+
+      <div class="contacto-grid">
+
+          <div class="contacto-info">
+
+            <div class="contacto-destacado">
+
+              <h2 class="page-title-secondary">Contactanos:</h2>
+
+              <div>
+                <p class="tel-destacado"><i class="fa-brands fa-whatsapp"></i> (11) 3565-5864</p>
+              </div>
+
+              <div>
+                <p class="horario-destacado">Horario: Lun - Vie: 8 a 20hrs</p>
+              </div>
+
             </div>
-            <div>
-              <label>Celular:
-                <input type="tel" placeholder="telefono" name="Teléfono">
-              </label>
+
+            <div class="contacto-mapa">
+              <h2 class="page-title-secondary">Donde estámos:</h2>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0073418051306!2d-58.418122989374055!3d-34.60397585739789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8a448229f9%3A0xb7fd3cdfa562f957!2sAv.%20Corrientes%203600%2C%20C1194AAO%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1785165402711!5m2!1ses!2sar"
+                width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-            <div>
-              <label>E-mail:
-                <input type="email" placeholder="e-mail" name="e-mail">
-              </label>
-            </div>
-            <div>
-              <label>Elija una Opcion:
-                <label>Es Paciente
-                  <input name="paciente" type="radio">
-                </label>
-                <label>Nuevo Paciente
-                  <input name="paciente" type="radio">
-                </label>
-              </label>
-            </div>
-            <div>
-              <label>Consulta:
-                <textarea name="" id=""></textarea>
-              </label>
-            </div>
-            <button type="submit" name="Enviar">Enviar</button>
-            <button type="reset" name="reseteo">Limpiar</button>
-            <button type="button" name="boton">Cancelar</button>
-          </form>
-        </div>
+
+          </div>
+
+          <div class="contacto-form">
+
+            <h2 class="page-title-secondary">Realiza tu consulta:</h2>
+            <form action="#" method="post">
+
+              <div class="form-group">
+                <label for="name">Nombre y Apellido</label>
+                <input type="text" id="name" name="name" placeholder="Ingrese su nombre y apellid" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tunombre@ejemplo.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" placeholder="+54 11 1234-5678" required />
+              </div>
+
+              <div class="form-group">
+                <label for="reason">Motivo de consulta</label>
+                <select id="reason" name="reason" required>
+                  <option value="" disabled selected>Seleccioná una opción</option>
+                  <option value="reserva">Solicitud de Turno</option>
+                  <option value="eventos">Reprogramar o cancelar un turno</option>
+                  <option value="trabajo">Consultar cobertura / obra social</option>
+                  <option value="trabajo">Presupuesto y formas de pago</option>
+                  <option value="otro">Otra consulta</option>
+                </select>
+              </div>
+
+              <fieldset>
+                <legend>¿Es paciente?</legend>
+                <div class="radio-group">
+                  <div>
+                    <input type="radio" id="first-yes" name="first-visit" value="si" required />
+                    <label for="first-yes">Sí</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="first-no" name="first-visit" value="no" required />
+                    <label for="first-no">No</label>
+                  </div>
+                </div>
+              </fieldset>
+
+
+              <div class="form-group">
+                <label for="comment">Mensaje</label>
+                <textarea id="comment" name="comment" placeholder="Detalle motivo de consulta" required></textarea>
+              </div>
+
+
+              <div class="form-buttons">
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                <button type="reset" class="btn btn-secondary">Limpiar formulario</button>
+              </div>
+
+            </form>
+
+          </div>
+
+       </div>   
+
     </section>
+
   </main>
 
   <footer>
     <div class="footer-section"">
-        <ul class="footer-menu">
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./sobremi.html">Sobre mí</a></li>
-          <li><a href="./tratamientos.html">Tratamientos</a></li>
-          <li><a href="./galeria.html">Galeria</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li><a href="./agendar.html">Agendar Turno</a></li>
-        </ul>
+        <ul class=" footer-menu">
+      <li><a href="./index.html">Inicio</a></li>
+      <li><a href="./sobremi.html">Sobre mí</a></li>
+      <li><a href="./tratamientos.html">Tratamientos</a></li>
+      <li><a href="./galeria.html">Galeria</a></li>
+      <li><a href="./contacto.html">Contacto</a></li>
+      <li><a href="./contacto.html">Agendar Turno</a></li>
+      </ul>
 
       <div class="footer-social">
         <a href="#" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
