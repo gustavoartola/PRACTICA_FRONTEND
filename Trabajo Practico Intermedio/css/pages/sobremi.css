@@ -10,7 +10,6 @@
 
 /* ##SECION PRINCIPAL## */
 .sobremi-grid {
-  /* background-color:darkorchid; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -38,7 +37,6 @@
 }
 
 .sobremi-porfolio-description {
-  /* background-color:darksalmon; */
   display: flex;
   flex-direction: column;
   padding: 1.5rem 2rem;
@@ -61,8 +59,7 @@
 }
 
 
-
-.etiqueta-item2{
+.etiqueta-item2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -70,23 +67,22 @@
 
 }
 
-.card-description{
+.card-description {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 
 /* Responsive tablet */
 @media(min-width:630px) {
 
- .sobremi-experience {
+  .sobremi-experience {
     flex-direction: row;
   }
 
-.etiqueta-item2{
-  flex-direction: column;
-}
-
+  .etiqueta-item2 {
+    flex-direction: column;
+  }
 
 }
 

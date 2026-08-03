@@ -16,7 +16,8 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(1, 0, 0, 0.3);
-  flex: 1 1 280px; /* crece/encoge pero nunca baja de 280px: ahí hace wrap */
+  flex: 1 1 280px;
+  /* crece/encoge pero nunca baja de 280px: ahí hace wrap */
   max-width: 320px;
   display: flex;
   flex-direction: column;
@@ -25,12 +26,13 @@
 .card-title {
   color: var(--primary);
   font-family: var(--font-heading);
-  font-weight:600;
+  font-weight: 600;
   font-size: 1rem;
 }
 
 .card-description {
-  flex: 1; /* empuja el botón al fondo aunque los textos tengan distinto largo */
+  flex: 1;
+  /* empuja el botón al fondo aunque los textos tengan distinto largo */
   color: var(--primary);
   font-family: var(--font-body);
   font-size: 0.8rem;
@@ -50,4 +52,3 @@
   gap: 0.8rem;
   flex: 1;
 }
-

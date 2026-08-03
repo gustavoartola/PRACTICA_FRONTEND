@@ -12,7 +12,9 @@
 
 .gallery-item {
   flex: 1 1 220px;
-  height: 220px;
+  display: block;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s;
@@ -20,4 +22,13 @@
 
 .gallery-item:hover {
   transform: scale(1.03);
+}
+
+
+/* Responsive a Tablet */
+@media(min-width:375px) {
+  .gallery-item {
+    height: 220px;
+  }
+
 }
