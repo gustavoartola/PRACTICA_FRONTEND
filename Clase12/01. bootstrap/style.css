@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    padding: 2rem;
+}
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.section-acordion {
+    padding: 1rem 20rem;
+}
+
+.section-buttons-items{
+    display: flex;
+    gap:1rem;
+}
+
+.section-tarjetas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1100px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card-body {
+    background-color: azure;
+}
+
+.card-title {
+    color:darkblue !important;
+    font-weight: bold;
+}
+
+.card-text {
+    color: darkblue;;
+}
+
+.section-carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner img{
+  max-height: 1000px;        /* Cambia 300px por la altura que prefieras */
+  width: auto !important;   /* Mantiene la proporción original de la imagen */
+  margin: 0 auto;           /* Centra horizontalmente la imagen */
+
+}
