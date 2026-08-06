@@ -19,3 +19,22 @@ console.log(5 - "5") // Resultado = 0, el "-" solo se utilziza como operador Mat
 console.log(Number("5")+ 5) // Resultado 10
 console.log(String(5) + 5)  // resultado 55
     
+// 2. Formas de controlar 
+// 2.1 Si quiero realizar SUMA
+console.log("Sumo 5 + 5: ", 5 + Number("5"))
+// Si quiero realizar CONCTENACIÒN
+console.log("Concateno + 5 y 5 con uso del '+': ",5 + "5")
+console.log("Concateno + 5 y 5 con uso de la ',': ",5,"5")
+console.log("Suma Concatenacion con coersion explicita: ", String(5) + "5")  // MAS USADA
+
+let digito = "5" 
+console.log(`Concateno con Bastick: ${digito}${digito}`)
+
+
+// 3. COMPARATIVA DEBIL
+// == (Dos iguales) Igualdad Débil. Compara Valor pero no el tipo de dato (NO USAR)
+console.log(5=="5")  
+
+// 4. COMPARATIVA FUERTE
+// === (Tres iguales) Igualdad Estricta. Compara Valor y Tipo de datos (USAR SIEMPRE)
+console.log(5==="5")
