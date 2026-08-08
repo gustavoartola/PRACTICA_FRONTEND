@@ -5,8 +5,9 @@ const nombreUsuario = "Lucas"
 
 // 1.1 DECLARAR UNA FUNCION
 
-function esMayor (edad, nombre){
+function esMayor (edad, nombre){  
 // Esta funcion te valida si un usuario es o no mayor de edad
+// Tiene dos PARAMETROS, edad y nombre
     if (edad>=18){
         console.log(`${nombre}: Acceso concedido`)         
         return true  
@@ -17,7 +18,7 @@ function esMayor (edad, nombre){
 }
 
 // 1.2 EJECUTAR (LLAMAR) UNA FUNCION
-
+// Al invocar la funcion, se pasan como "ARGUMENTO" los valores
 esMayor(22, "Ana")
 esMayor(15, "Lucas")
 
