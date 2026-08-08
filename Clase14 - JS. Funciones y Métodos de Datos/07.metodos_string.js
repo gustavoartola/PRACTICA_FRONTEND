@@ -1,3 +1,5 @@
+//7. METODOS CON STRINGS
+
 // 7.1  .includes(palabra):
 // Es un "buscador". Te responde con un simple SÍ (true) o NO (false) si el texto contiene esa palabra.
 
