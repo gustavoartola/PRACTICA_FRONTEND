@@ -31,3 +31,23 @@ console.log("Algun sintetizador es Korg? ", sintetizadores80s.some(sintetizador 
 // Todos complen ??
 console.log("Todos los sintetizadores son Korg? ", sintetizadores80s.every(sintetizador => sintetizador.marca==="Korg"));
 
+
+// 6.5 REDUCE
+// El método .reduce() sirve para tomar todos los elementos de un array y "reducirlos" a un solo valor (un número, un objeto, otro array, etc.).
+// Un caso de uso práctico y muy común en desarrollo web es calcular el total de un carrito de compras, aplicando filtros o manipulando objetos dentro del array.
+
+// Ejemplo: Total de un Carrito de Compras
+// Imagina que tienes una lista de productos en un carrito y quieres calcular el monto total a pagar:
+
+const carrito = [
+  { producto: 'Laptop', precio: 1000, cantidad: 1 },
+  { producto: 'Mouse', precio: 25, cantidad: 2 },
+  { producto: 'Teclado', precio: 50, cantidad: 1 }
+];
+console.log("Mi inventario es: ", carrito)
+
+const totalPagar = carrito.reduce((acumulador, itemActual) => {
+  return acumulador + (itemActual.precio * itemActual.cantidad);
+}, 0);
+
+console.log(`El monto total del inventario es: ${totalPagar}`); // Resultado: 1100
