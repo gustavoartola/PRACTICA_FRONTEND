@@ -1,4 +1,4 @@
-// 06. Otros metodos del apunte
+// 06. OTROS METODOS DEL APUNTE
 
 const sintetizadores80s = [
   { id: 1, marca: 'Yamaha', modelo: 'DX7', año: 1983, precioEstimado: 850000, moneda: 'ARS' },
@@ -14,7 +14,8 @@ const sintetizadores80s = [
 ];
 
 // 6.1. FIND
-// Busca un elemento
+// Busca un elemento  (El primero que encuentra)
+// Siempe se utiliza para conjunto reducido de datos
 console.log(sintetizadores80s.find(sintetizador => sintetizador.id ===2));
 
 // 6.2. FOREACH

@@ -43,4 +43,7 @@ for (let index = 0; index < aula.length; index++) {
     console.log(aula[index], index);
 }
 
-
+// Otra forma mas moderna de FOR r
+for (const alumno of aula) {
+    console.log(alumno);
+}
