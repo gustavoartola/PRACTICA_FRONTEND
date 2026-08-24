@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase 18 - DOM - Clases</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <ul class="lista-desordenada">
+      <li class="list-item">Soy un list item 1</li>
+      <li class="list-item" id="item-especial">
+        Soy un list item 2 pero especial
+      </li>
+      <li class="list-item">Soy un list item 3</li>
+      <li class="list-item">Soy un list item 4</li>
+      <li class="list-item">Soy un list item 5</li>
+      <li class="list-item verde">Soy un list item 6</li>
+    </ul>
+
+    <p class="texto"></p>
+
+    <div class="contenedor-magico"></div>
+
+    <button onclick="agregarListaFinal()">
+      Agregar un item al final del listado
+    </button>
+
+    <button onclick="agregarListaInicio()">
+      Agregar un item al inicio de la lista
+    </button>
+
+    <button onclick="agregarAtributoTogle()">
+      Modificar item espacial con Togle
+    </button>
+
+    <button onclick="removerClaseVerde()">
+      Eliminar Clase Verde al item 6
+    </button>
+
+    <button onclick="agregarClaseVerde()">
+      Agergar Clase Vede al item 6
+    </button>
+
+    <button onclick="quitarAllClases()">
+      Eliminar todas las clases (atributos) del item especial
+    </button>
+
+    <button onclick="eliminarListaUltimo()">
+      Eliminar ultimo elemento de la lista
+    </button>
+
+    <button onclick="eliminarListaPrimero()">
+      Eliminar primer elemento de la lista
+    </button>
+
+    <button onclick="modificarTexto()">
+      Modificar texto item especial
+    </button>
+
+    <button onclick="agregoParrafo()">
+      Agrego Parrafo
+    </button>
+
+    <button onclick="agregoAtributoEspecial()">
+      Convierto ultimo item en Especial
+    </button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
