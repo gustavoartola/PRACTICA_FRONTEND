@@ -16,7 +16,7 @@ const body = document.querySelector("body");
 function agregarListaFinal() {
   const li = document.createElement("li");
   li.textContent = "Soy un item nuevo al final de la lista";
-  li.classList = "list-item";
+  li.classList.add("list-item");
   lista.appendChild(li);
 }
 
@@ -24,13 +24,15 @@ function agregarListaFinal() {
 function agregarListaInicio() {
   const li = document.createElement("li");
   li.textContent = "Soy un item nuevo al iniciio de la lista";
-  li.classList = "list-item";
+  li.classList.add("list-item");
   lista.insertBefore(li, listItem[0]);
 }
 
 // - Eliminar el ultimo elemento de la lista.
 function eliminarListaUltimo() {
-    lista.removeChild(lista.lastChild);  
+    lista.removeChild(lista.lastChild);                  // Forma en que se lo solucione haciendo la practica-   
+    // lista.removeChild(listItem(listItem.length-1));   // Forma en la que se realizo en clase
+    // lista.removeChild(lista.lastElementChild);           // Otra Forma en la que se realizo en clase   
 }
 
 // - Eliminar el primer elemento de la lista.
