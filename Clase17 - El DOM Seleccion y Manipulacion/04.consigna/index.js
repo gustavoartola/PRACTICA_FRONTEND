@@ -183,6 +183,7 @@ function mostrarCatalogo() {
     numeroTD.textContent = contador;
     nombreTD.textContent = nombre;
     precioTD.textContent = precio;
+    precioTD.classList.add("precio");
     productoTR.appendChild(numeroTD);
     productoTR.appendChild(nombreTD);
     productoTR.appendChild(precioTD);
