@@ -89,43 +89,28 @@ function registrarProductos(productosAlmacen) {
 
     // Busco si tengo el producto deseado por el cliente en mi almacen.
     const nombreEncontrado = nombresProductos.find(
-      (nombre) => nombre === productoNormalizado,
+      (nombre) =>
+        nombre.trim().toLowerCase() ===
+        productoNormalizado.trim().toLowerCase(),
     );
 
     if (nombreEncontrado !== undefined) {
-      productosCliente.push(productoNormalizado);
+      productosCliente.push(
+        productoNormalizado[0].toUpperCase() + productoNormalizado.slice(1),
+      );
+
       console.log(
         `El producto ${productoNormalizado} fue agregado a la compra.`,
       );
     } else {
-      productosNoEncontrados.push(productoNormalizado);
+      productosNoEncontrados.push(
+        productoNormalizado[0].toUpperCase() + productoNormalizado.slice(1),
+      );
       console.log(`El producto ${productoNormalizado} no fue encontrado.`);
     }
   }
 
-  //Listar Productos de la Compra
-  console.log(productosCliente);
-
-  mostrarLista(
-    listaAceptados,
-    productosCliente,
-    "Aun no hay elementos registrados en la compra",
-  );
-
-  //Listar Productos No Encontrados
-  console.log(productosNoEncontrados);
-
-  mostrarLista(
-    listaNoAceptados,
-    productosNoEncontrados,
-    "Aun no hay elementos no encontrados",
-  );
-
-  total.textContent = calcularTotal(productosCliente, productosAlmacen);
-
-  iniciar.classList.add("oculto");
-
-  return (productosCliente, productosNoEncontrados);
+  return { productosCliente, productosNoEncontrados };
 }
 
 // 3. Implementar una función que reciba la lista de productos válidos del cliente y la lista base de precios:
@@ -170,7 +155,6 @@ function calcularTotal(productosCliente, productosAlmacen) {
 // Pie	Mostrar la cantidad total de productos del catálogo (productos.length).
 
 function mostrarCatalogo() {
-
   catalogoBody.innerHTML = "";
   let contador = 1;
 
@@ -207,7 +191,6 @@ function mostrarCatalogo() {
 // Si tiene elementos → crear un <li> por cada uno e insertarlo con appendChild().
 
 function mostrarLista(contenedor, elementos, mensajeVacio) {
-
   contenedor.innerHTML = "";
 
   //Si el listado de <elementos> está vacio.
@@ -237,23 +220,20 @@ function mostrarLista(contenedor, elementos, mensajeVacio) {
 
 // 6. Función iniciarCompra()
 // Es la función que orquesta todo el proceso. Se ejecuta al hacer click en el botón Iniciar compra.
+// Invocar registrarProductos() capturando el resultado con desestructuración de objetos:
+// const { productosCliente, productosNoEncontrados } = registrarProductos(productos);
+
+// Invocar calcularTotal() con los productos válidos.
+// Mostrar los resultados por consola (console.log).
+// Mostrar los resultados en la página, usando mostrarLista() y actualizando el total.
+// Revelar la sección de resultados con classList.
 
 function iniciarCompra() {
-
   resultados.classList.remove("oculto");
   reiniciar.classList.remove("oculto");
 
-  ReiniciarCompra();
-
-  registrarProductos(productosAlmacen);
-  
-}
-
-
-function ReiniciarCompra() {
-
-  const productosCliente = [];
-  const productosNoEncontrados = [];
+  const { productosCliente, productosNoEncontrados } =
+    registrarProductos(productosAlmacen);
 
   //Listar Productos de la Compra
   console.log(productosCliente);
@@ -275,16 +255,14 @@ function ReiniciarCompra() {
 
   total.textContent = calcularTotal(productosCliente, productosAlmacen);
 
-  iniciar.classList.remove("oculto");
+  iniciar.classList.add("oculto");
 }
 
-// Invocar registrarProductos() capturando el resultado con desestructuración de objetos:
-// const { productosCliente, productosNoEncontrados } = registrarProductos(productos);
-
-// Invocar calcularTotal() con los productos válidos.
-// Mostrar los resultados por consola (console.log).
-// Mostrar los resultados en la página, usando mostrarLista() y actualizando el total.
-// Revelar la sección de resultados con classList.
+function ReiniciarCompra() {
+  iniciar.classList.remove("oculto");
+  reiniciar.classList.add("oculto");
+  resultados.classList.add("oculto");
+}
 
 // Eventos
 
@@ -294,8 +272,6 @@ iniciar.addEventListener("click", function () {
 
 reiniciar.addEventListener("click", function () {
   ReiniciarCompra();
-  reiniciar.classList.add("oculto");
-  resultados.classList.add("oculto");
 });
 
 document.addEventListener("DOMContentLoaded", function () {
