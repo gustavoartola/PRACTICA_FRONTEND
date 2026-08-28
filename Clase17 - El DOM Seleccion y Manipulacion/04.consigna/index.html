@@ -10,9 +10,9 @@
   <body>
     <h1>Sistema de compra y liquidacion</h1>
 
-    <p>
+    <p class="ayuda">
       Al precionar iniciar compra, se agre un cuadro de dialogopara ingresar
-      productos uno por uno. Para finalizar la carga ingresa un punto:
+      productos uno por uno. Para finalizar la carga ingresa un punto: 
       <code>.</code>
     </p>
 
@@ -23,7 +23,7 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Producto/th></th>
+          <th>Producto</th>
           <th>Precio</th>
         </tr>
       </thead>
@@ -40,8 +40,8 @@
       </tfoot>
     </table>
 
-    <button id="iniciar" . class="btm-principal">Iniciar compra</button>
-    <button id="reiniciar" class="btn-secundario oculto">Nueva Compra</button>
+    <button id="iniciar" class="btm-principal">Iniciar Compra</button>
+    <button id="reiniciar" class="btm-principal oculto">Finalizar Compra</button>
 
     <section id="resultados" class="oculto">
       <h2>Productos aceptados en la compra:</h2>
@@ -50,7 +50,7 @@
  
       <h2>Productos no encontrdos en la tienda:</h2>
 
-      <ul id="listao-no-encontrados" class="lista"></ul>
+      <ul id="lista-no-aceptados" class="lista"></ul>
 
       <p id="total" class="total">Total a Pagar: $0</p>
     </section>

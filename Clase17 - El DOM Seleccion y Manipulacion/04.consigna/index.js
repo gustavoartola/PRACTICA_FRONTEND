@@ -8,10 +8,15 @@
 const catalogoBody = document.querySelector("#catalogo-body");
 const catalogoCantidad = document.querySelector("#catalogo-cantidad");
 const iniciar = document.querySelector("#iniciar");
-const reiniciar = document.querySelector("#Reiniciar");
+const reiniciar = document.querySelector("#reiniciar");
 const listaAceptados = document.querySelector("#lista-aceptados");
 const listaNoAceptados = document.querySelector("#lista-no-aceptados");
 const total = document.querySelector("#total");
+const resultados = document.querySelector("#resultados");
+
+// 0. Mensaje de prueba por medio de PROMP
+// let mensaje = prompt("Ingrese su nombre");
+// console.log(mensaje);
 
 // 1. Crear una estructura de datos `productos` que contenga el catálogo de la tienda con sus respectivos precios de referencia.
 // Cada producto es un objeto con dos claves: `nombre` y `precio`.
@@ -64,11 +69,11 @@ function registrarProductos(productosAlmacen) {
 
     if (entrada === null) {
       alert("Para terminar la compra, ingresar un punto: .");
-      continue; // vuelve al qwhile
+      continue; // vuelve al while y continua
     }
 
     // Normalizacion
-    const productoNormalizado = entrada.trim().toLocaleLowerCase();
+    const productoNormalizado = entrada.trim();
 
     //Valido Si se el cliente desa finalizar la compra.
     if (productoNormalizado === ".") {
@@ -76,7 +81,7 @@ function registrarProductos(productosAlmacen) {
       continue; // Salimos sin procesar el "." dado que se termina la compra
     }
 
-    //Vañoda si el cliemte mo ingreso clave del producto
+    //Valida si el cliemte mo ingreso clave del producto
     if (productoNormalizado === "") {
       alert("Por favor ingresa un producto válido");
       continue;
@@ -96,9 +101,31 @@ function registrarProductos(productosAlmacen) {
       productosNoEncontrados.push(productoNormalizado);
       console.log(`El producto ${productoNormalizado} no fue encontrado.`);
     }
-
-    return (productosCliente, productosNoEncontrados);
   }
+
+  //Listar Productos de la Compra
+  console.log(productosCliente);
+
+  mostrarLista(
+    listaAceptados,
+    productosCliente,
+    "Aun no hay elementos registrados en la compra",
+  );
+
+  //Listar Productos No Encontrados
+  console.log(productosNoEncontrados);
+
+  mostrarLista(
+    listaNoAceptados,
+    productosNoEncontrados,
+    "Aun no hay elementos no encontrados",
+  );
+
+  total.textContent = calcularTotal(productosCliente, productosAlmacen);
+
+  iniciar.classList.add("oculto");
+
+  return (productosCliente, productosNoEncontrados);
 }
 
 // 3. Implementar una función que reciba la lista de productos válidos del cliente y la lista base de precios:
@@ -121,7 +148,9 @@ function calcularTotal(productosCliente, productosAlmacen) {
 
       totalAPager += precio;
 
-      log(`Producto: ${producto}, Precio: ${precio}, subtotal ${totalAPager}`);
+      console.log(
+        `Producto: ${producto}, Precio: ${precio}, subtotal ${totalAPager}`,
+      );
     }
   });
 
@@ -140,6 +169,29 @@ function calcularTotal(productosCliente, productosAlmacen) {
 // Insertar	appendChild() de las celdas en la fila, y de la fila en el <tbody>.
 // Pie	Mostrar la cantidad total de productos del catálogo (productos.length).
 
+function mostrarCatalogo() {
+
+  catalogoBody.innerHTML = "";
+  let contador = 1;
+
+  productosAlmacen.forEach((producto) => {
+    const { nombre, precio } = producto;
+    const productoTR = document.createElement("tr");
+    const numeroTD = document.createElement("td");
+    const nombreTD = document.createElement("td");
+    const precioTD = document.createElement("td");
+    numeroTD.textContent = contador;
+    nombreTD.textContent = nombre;
+    precioTD.textContent = precio;
+    productoTR.appendChild(numeroTD);
+    productoTR.appendChild(nombreTD);
+    productoTR.appendChild(precioTD);
+    catalogoBody.appendChild(productoTR);
+    catalogoCantidad.textContent = contador;
+    contador++;
+  });
+}
+
 // 5. Función mostrarLista(contenedor, elementos, mensajeVacio)
 // Función reutilizable que dibuja un array de strings dentro de un <ul>. Se usa dos veces: para los productos aceptados y para los no encontrados.
 
@@ -154,36 +206,76 @@ function calcularTotal(productosCliente, productosAlmacen) {
 // Si tiene elementos → crear un <li> por cada uno e insertarlo con appendChild().
 
 function mostrarLista(contenedor, elementos, mensajeVacio) {
-  //Contenedor es una lista <ul>
-  contenedor.innerHTML = ""; // Vacia la lista
 
-  //elementos es el item de la lista <li>
-  if (elementos.lenght === 0) {
-    // ⚠️ hay que GUARDAR el elemento creado en una variable
+  contenedor.innerHTML = "";
+
+  //Si el listado de <elementos> está vacio.
+  if (elementos.length === 0) {
+    // ⚠️ hay crear un elemento HTML tipo <li>
     const li = document.createElement("li");
 
     li.textContent = mensajeVacio;
     li.classList.add("vacio");
 
-    // appendChild --> similar al push   incorpora el <li> en el contenedor <ul>
+    // appendChild --> similar al push
+    // incorpora el <li> en el contenedor <ul>
     contenedor.appendChild(li);
+
     return;
   }
 
+  // Por cada item del listado
   elementos.forEach((elemento) => {
-    // ⚠️ hay que GUARDAR el elemento creado en una variable
+    // ⚠️ hay crear un elemento HTML tipo <li>
     const li = document.createElement("li");
 
-    document.createElement("li");
     li.textContent = elemento;
-    contenedor.appendChild("li");
-
+    contenedor.appendChild(li);
   });
-  
 }
 
 // 6. Función iniciarCompra()
 // Es la función que orquesta todo el proceso. Se ejecuta al hacer click en el botón Iniciar compra.
+
+function iniciarCompra() {
+
+  resultados.classList.remove("oculto");
+  reiniciar.classList.remove("oculto");
+
+  ReiniciarCompra();
+
+  registrarProductos(productosAlmacen);
+  
+}
+
+
+function ReiniciarCompra() {
+
+  const productosCliente = [];
+  const productosNoEncontrados = [];
+
+  //Listar Productos de la Compra
+  console.log(productosCliente);
+
+  mostrarLista(
+    listaAceptados,
+    productosCliente,
+    "Aun no hay elementos registrados en la compra",
+  );
+
+  //Listar Productos No Encontrados
+  console.log(productosNoEncontrados);
+
+  mostrarLista(
+    listaNoAceptados,
+    productosNoEncontrados,
+    "Aun no hay elementos no encontrados",
+  );
+
+  total.textContent = calcularTotal(productosCliente, productosAlmacen);
+
+  iniciar.classList.remove("oculto");
+}
 
 // Invocar registrarProductos() capturando el resultado con desestructuración de objetos:
 // const { productosCliente, productosNoEncontrados } = registrarProductos(productos);
@@ -192,3 +284,19 @@ function mostrarLista(contenedor, elementos, mensajeVacio) {
 // Mostrar los resultados por consola (console.log).
 // Mostrar los resultados en la página, usando mostrarLista() y actualizando el total.
 // Revelar la sección de resultados con classList.
+
+// Eventos
+
+iniciar.addEventListener("click", function () {
+  iniciarCompra();
+});
+
+reiniciar.addEventListener("click", function () {
+  ReiniciarCompra();
+  reiniciar.classList.add("oculto");
+  resultados.classList.add("oculto");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  mostrarCatalogo();
+});
