@@ -23,3 +23,20 @@ Altl + flechas del teclado <-- o -->  Vuelve al lugar donde estabas  (Tambien lo
 
 
 )
+
+
+
+HTML
+[Elemento].[Nombre Clase] 
+--> ej  div.botones
+--> 
+ <div className="botones">
+ </div>
+
+[Elemento]*Cantidad 
+--> ej. button*4
+-->
+   <button></button>
+   <button></button>
+   <button></button>
+   <button></button>
