@@ -40,3 +40,9 @@ HTML
    <button></button>
    <button></button>
    <button></button>
+
+
+REACT
+// Precondicion: Tener instalado extensión @ext:dsznajder.es7-react-js-snippets
+
+rfce + enter --> Arma un bloque funcional de react con exportación
