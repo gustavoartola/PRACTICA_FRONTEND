@@ -2,7 +2,7 @@ import React from "react";
 
 import "../src/App.css"
 
-function PerfilHeroe({ id, nombre, alterEgo, poderes, universo }) {
+function PerfilHeroe({id, nombre, alterEgo, poderes, universo }) {
   return (
     <div className="tarjeta">
       <h2>{nombre}</h2>

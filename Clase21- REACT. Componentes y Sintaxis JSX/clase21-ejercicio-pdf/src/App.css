@@ -1,20 +1,25 @@
-.tarjeta{
+.tarjeta {
   border-style: solid;
   border-radius: 6px;
   background-color: rgb(170, 188, 221);
-  color:  darkblue;
+  color: darkblue;
   border-color: darkblue;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   margin: 10px;
 }
 
-h1{
+h1 {
   font-family: 'Courier New', Courier, monospace;
   color: darkblue;
   text-align: center;
 }
 
-.misHeroes{
-  
-}
+/* 
+.misHeroes {
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
