@@ -48,7 +48,9 @@ function Interruptor() {
       <h2>Interruptor</h2>
 
     {/* Incorporo un if ternario para incorporar texto o icono segun valoer del estado "luz encendida" */}
-      <div className="bombilla">{luzEncendida ? "🌞" : "🌙" }</div>
+      <div className={`bombilla ${luzEncendida ? "encendida" : "apagada"}`}>
+        {luzEncendida ? "🌞" : "🌙"}
+      </div>
 
       <button onClick={cambiarLuz} >{luzEncendida ? "Apagar" : "Encender"}</button>
 

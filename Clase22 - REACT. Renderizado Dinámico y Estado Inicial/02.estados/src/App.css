@@ -54,6 +54,15 @@ h3 {
 .bombilla {
   font-size: 48px;
   margin-bottom: 12px;
+  padding: 10px;
+}
+
+.bombilla.encendida {
+  background-color: yellow;
+}
+
+.bombilla.apagada {
+  background-color: black;
 }
 
 .interruptor button {
