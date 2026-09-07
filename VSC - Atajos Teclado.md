@@ -46,3 +46,12 @@ REACT
 // Precondicion: Tener instalado extensión @ext:dsznajder.es7-react-js-snippets
 
 rfce + enter --> Arma un bloque funcional de react con exportación
+
+Para importar en el componente funcional (ej. Interruptor) en el archivo principal App.jsx
+Existe el atajo --> [nombre Compornte Funcional] / + Enter : Como resultado se arma zInterruptor />
+Para importarlo --> Se coloca el cursor al final del nombre del compornete y tenes el atajo --> Ctrl + barra espaciadora + Enter: import Interruptor from './components/Interruptor'; 
+
+
+Para incorporar un emoji en un texto
+
+tecla windowas + punto.
