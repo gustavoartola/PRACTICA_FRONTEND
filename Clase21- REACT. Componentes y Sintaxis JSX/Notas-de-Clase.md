@@ -1,26 +1,43 @@
-Clase 21 - Componentes y Sintaxis
+# 📘 Clase 21  
+## ✨ Componentes y Sintaxis
 
-1. Compoente
-- Código Reutilizable (generico, para varios escenarios)
-- Responsabilidad única.  (Principio SOLID --> Single Responsability)
-- Partes Independientes.
-- Componentizar / Modularizar (Que tienen partes intercambiables)
-- Se escribe una unica vez, sin necesidad de repetir codigo --> Se usa toda las veces que quieras, donde quieras.
+---
 
-Que nos proveen ??
-- Interfaz de Usuario
-- FUncionalidades 
-- Reutilización --> Evitar repetir código. (principio Don't Repeat your self "DRY")
-- Segmentación.
+## 🔹 Componente
 
-HTML --> Modular , reutilizable ? --> NO
+- **Código Reutilizable** → genérico, aplicable a varios escenarios.  
+- **Responsabilidad Única** → Principio SOLID → *Single Responsibility*.  
+- **Partes Independientes** → cada componente funciona por sí mismo.  
+- **Componentizar / Modularizar** → partes intercambiables y reutilizables.  
+- **Escritura Única** → se escribe una sola vez y se usa todas las veces que quieras, donde quieras.  
 
-Que problemas trae no se modilar/reutilizable ?
-- Mantenimiento mas costoso.
-- Propenso a errores. --> Directamente proporcional a la cantidad de codigo.
-- Dificil escalabilidad.
-- Genera dificultad para interpretar y seguir el código.
+---
 
-CONCEPTTOS GENERICOS
-- Interfaz: Punto de interacción entre dos partes 
-- Modular: Compuesto por partes independientes las cuales se pueden conectar, intercambiar, añadir o quitar sin afectar el resto del sisttema 
+## ❓ ¿Qué nos proveen?
+
+- **Interfaz de Usuario**  
+- **Funcionalidades**  
+- **Reutilización** → evitar repetir código (*principio DRY: Don't Repeat Yourself*).  
+- **Segmentación** → dividir en bloques más claros y manejables.  
+
+---
+
+## 🖥️ HTML → ¿Modular y reutilizable?
+
+➡️ **NO**  
+
+---
+
+## ⚠️ Problemas de no modularizar / reutilizar
+
+- Mantenimiento más costoso.  
+- Propenso a errores → directamente proporcional a la cantidad de código.  
+- Dificultad en la escalabilidad.  
+- Genera dificultad para interpretar y seguir el código.  
+
+---
+
+## 📚 Conceptos Genéricos
+
+- **Interfaz** → punto de interacción entre dos partes.  
+- **Modular** → compuesto por partes independientes que se pueden conectar, intercambiar, añadir o quitar sin afectar el resto del sistema.  
