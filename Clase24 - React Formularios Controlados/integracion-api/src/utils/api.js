@@ -1,0 +1,2 @@
+// Endpoint
+ export const URL_PERSONAJES = "http://localhost:3001/characters";

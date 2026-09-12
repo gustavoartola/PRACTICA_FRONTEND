@@ -7,8 +7,7 @@ function Personajes() {
   // Nanejar los errores
   if (loading) return <p className="cargando">Cargando Personajes ....</p>;
 
-  if (error)
-    return <p className="cargando">Error al cargar Personajes: ${error}</p>;
+  if (error) return <p >Error al cargar Personajes: {error.message}</p>;
 
   return (
     <section className="tarjeta personajes">
